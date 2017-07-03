@@ -1,0 +1,47 @@
+﻿<Page x:Class="MvvmSample.Desktop.Pages.ProductPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MvvmSample.Desktop.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="500"
+      Title="ProductPage" 
+      Loaded="Page_Loaded"
+      d:DataContext="{d:DesignData /SampleData/SampleProductSampleData.xaml}">
+
+    <Grid Margin="4,4,4,4" >
+        <TextBlock Text="Product Item" Height="40" FontSize="24" VerticalAlignment="Top"></TextBlock>
+        <StackPanel Margin="0,40,0,0" Orientation="Vertical">
+
+            <StackPanel Height="30" Orientation="Horizontal" Margin="4,4,4,4">
+                <TextBlock Text="Title" Width="80" VerticalAlignment="Center" />
+                <TextBlock x:Name="Title" Width="200" Text="{Binding Title}" VerticalAlignment="Center"  />
+            </StackPanel>
+
+            <StackPanel Height="30" Orientation="Horizontal" Margin="4,4,4,4">
+                <TextBlock Text="Description" Width="80" VerticalAlignment="Center" />
+                <TextBlock x:Name="Description" Width="400" Text="{Binding Description}"  VerticalAlignment="Center" />
+            </StackPanel>
+
+            <StackPanel Height="30" Orientation="Horizontal" Margin="4,4,4,4">
+                <TextBlock Text="Publisher" Width="80" VerticalAlignment="Center" />
+                <TextBlock x:Name="Publisher" Width="200" Text="{Binding Publisher}"  VerticalAlignment="Center" />
+            </StackPanel>
+
+            <StackPanel Height="30" Orientation="Horizontal" Margin="4,4,4,4">
+                <TextBlock Text="Price" Width="80" VerticalAlignment="Center" />
+                <TextBlock x:Name="Price" Width="200" Text="{Binding Price}" VerticalAlignment="Center"  />
+            </StackPanel>
+
+            <StackPanel Height="30" Orientation="Horizontal" Margin="4,4,4,4">
+                <Button x:Name="DownloadButton" Content="_Download" Width="100" Margin="0,0,10,0" Click="DownloadButton_Click" />
+                <Button x:Name="OpenProductSiteButton" Content="_Open Site" Width="100" Margin="0,0,10,0" Click="OpenProductSiteButton_Click" />
+                <Button x:Name="OpenPublisherSiteButton" Content="_Publisher" Width="100" Margin="0,0,10,0" Click="OpenPublisherSiteButton_Click" />
+            </StackPanel>
+
+        </StackPanel>
+
+
+    </Grid>
+</Page>

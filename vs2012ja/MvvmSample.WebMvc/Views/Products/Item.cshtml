@@ -1,0 +1,22 @@
+﻿@model MvvmSample.Data.ViewModels.ViewProduct
+@{
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+@section ribbon{
+    <ul>
+        <li>@Html.ActionLink("New Item", "NewItem", "Products", null, new { @class = "newItemButton linkButton" })</li>
+        <li><a class="editItemButton linkButton" href="#" onclick="alert('実装されていません。ステップアップのために実装してみましょう。');">Edit Item</a></li>
+        <li><a class ="deleteItemButton linkButton" href="#" onclick="alert('実装されていません。ステップアップのために実装してみましょう。');">Delete Item</a></li>
+    </ul>
+}
+
+<h1>@ViewBag.Title</h1>
+<p>Title : @Model.Title</p>
+<p>Description : @Model.Description</p>
+<p>Publisher : @Model.Publisher</p>
+<p>Price : @Model.Price</p>
+<p>
+    <a target="_blank" href="@Model.DownloadUrl">Download</a>
+    <a target="_blank" href="@Model.ProductUrl">Open Site</a>
+    <a target="_blank" href="@Model.PublisherUrl">Publisher</a>
+</p>

@@ -1,0 +1,41 @@
+﻿<RibbonWindow x:Class="MvvmSample.Desktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MvvmSample.Desktop"
+        mc:Ignorable="d"
+        Title="MVVM Sample" Height="580" Width="650"
+        ResizeMode="CanResizeWithGrip"
+        Loaded="RibbonWindow_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition />
+            <RowDefinition Height="24"/>
+        </Grid.RowDefinitions>
+        
+        <Ribbon x:Name="Ribbon" Background="White">
+            <Ribbon.ApplicationMenu>
+                <RibbonApplicationMenu Visibility="Collapsed" />
+            </Ribbon.ApplicationMenu>
+            <RibbonTab Header="HOME" >
+                <RibbonGroup Header="Navigate">
+                    <RibbonButton x:Name="GoBackButton" Label="Back" Click="GoBackButton_Click" LargeImageSource="Images/ribbon-back.png" />
+                    <RibbonButton x:Name="GoHomeButton" Label="Home" Click="GoHomeButton_Click" SmallImageSource="Images/ribbon-home.png" />
+                    <RibbonButton x:Name="GoProductsButton" Label="Products" Click="GoProductsButton_Click" SmallImageSource="Images/ribbon-products.png" />
+                </RibbonGroup>
+                <RibbonGroup Header="View">
+                    <RibbonButton x:Name="RefreshButton" Label="Refresh" Click="RefreshButton_Click" SmallImageSource="Images/ribbon-refresh.png" />
+                </RibbonGroup>
+                <RibbonGroup Header="Edit">
+                    <RibbonButton x:Name="AddNewItemButton" Label="New Item" Click="AddNewItemButton_Click" SmallImageSource="Images/ribbon-add.png"/>
+                    <RibbonButton x:Name="EditItemButton" Label="Edit Item" Click="EditItemButton_Click" SmallImageSource="Images/ribbon-edit.png" />
+                    <RibbonButton x:Name="DeleteItemButton" Label="Delete Item" Click="DeleteItemButton_Click" SmallImageSource="Images/ribbon-delete.png" />
+                </RibbonGroup>
+            </RibbonTab>
+        </Ribbon>
+        
+        <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden" Navigated="MainFrame_Navigated" Navigating="MainFrame_Navigating" />
+    </Grid>
+</RibbonWindow>

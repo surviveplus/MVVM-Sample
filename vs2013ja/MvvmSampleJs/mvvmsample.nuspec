@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+ <metadata>
+   <id>mvvmsample.js</id>
+   <version>1.0.0.4</version>
+   <authors>SHIN-ICHI</authors>
+   <description>MvvmSample.WebSpa で使用する TypeScript による View の実装です。</description>
+   <language>en-US</language>
+   <dependencies>
+     <dependency id="jQuery" version="[2.1.4,)" />
+     <dependency id="jquery.TypeScript.DefinitelyTyped" version="[2.2.6,)" />
+     <dependency id="knockout.TypeScript.DefinitelyTyped" version="[0.8.2,)" />
+     <dependency id="knockoutjs" version="[3.3.0,)" />
+     <dependency id="linq.js" version="[2.2.0.2,)" />
+     <dependency id="linq.TypeScript.DefinitelyTyped" version="[0.1.8,)" />
+   </dependencies>
+ </metadata>
+<files>
+  <file src="Content\mvvmsample.min.css" target="content\Content"/>
+  <file src="Content\images\*.png" target="content\Content\images"/>
+  
+  <file src="Scripts\typings\mvvmsample\mvvmsample.d.ts" target="content\Scripts\typings\mvvmsample"/>
+  <file src="Scripts\mvvmsample.js" target="content\Scripts"/>
+  <file src="Scripts\mvvmsample.min.js" target="content\Scripts"/>
+</files>
+</package>

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{5FAE026E-3298-4F31-84D8-EF3DC683659C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptToolsVersion>1.4</TypeScriptToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Content\images\ribbon-add.png" />
+    <Resource Include="Content\images\ribbon-back.png" />
+    <Resource Include="Content\images\ribbon-delete.png" />
+    <Resource Include="Content\images\ribbon-edit.png" />
+    <Resource Include="Content\images\ribbon-home.png" />
+    <Resource Include="Content\images\ribbon-products.png" />
+    <Resource Include="Content\images\ribbon-refresh.png" />
+    <Resource Include="Content\images\ribbon-upload.png" />
+    <Resource Include="Content\images\ribbon-users.png" />
+    <Content Include="AjaxMin.css.xml" />
+    <Content Include="Content\mvvmsample.css" />
+    <Content Include="mvvmsample.html" />
+    <Content Include="NuGet.exe" />
+    <Content Include="packages.config" />
+    <Content Include="api\Home.json" />
+    <Content Include="api\saveproduct.json" />
+    <Content Include="HowToBuild.md" />
+    <None Include="nuspec.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.4.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.js" />
+    <Content Include="Scripts\knockout-3.3.0.debug.js" />
+    <Content Include="Scripts\knockout-3.3.0.js" />
+    <None Include="Scripts\linq-vsdoc.js" />
+    <Content Include="Scripts\linq.js" />
+    <Content Include="Scripts\linq.min.js" />
+    <Content Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="mvvmsample.design.ts" />
+    <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\knockout\knockout.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\linq\linq.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\linq\linq.jquery.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\mvvmsample\mvvmsample.app.ts" />
+    <TypeScriptCompile Include="Scripts\typings\mvvmsample\mvvmsample.frame.ts" />
+    <TypeScriptCompile Include="Scripts\typings\mvvmsample\mvvmsample.home.ts" />
+    <TypeScriptCompile Include="Scripts\typings\mvvmsample\mvvmsample.editproduct.ts" />
+    <TypeScriptCompile Include="Scripts\typings\mvvmsample\mvvmsample.product.ts" />
+    <TypeScriptCompile Include="Scripts\typings\mvvmsample\mvvmsample.products.ts" />
+    <TypeScriptCompile Include="Scripts\typings\mvvmsample\mvvmsample.settings.ts" />
+    <TypeScriptCompile Include="Scripts\typings\mvvmsample\mvvmsample.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="api\Products.json" />
+    <Content Include="Scripts\jquery-2.1.4.min.map" />
+    <Content Include="mvvmsample.nuspec" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>MvvmSampleJs</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets')" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>24493</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:24493/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Target Name="ReleaseTypeScript" Condition="'$(Configuration)'=='Release'" AfterTargets="AfterBuild">
+    <Exec Command="&quot;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.5\tsc.exe&quot; -t ES5 -out &quot;$(ProjectDir)Scripts\mvvmsample.js&quot; &quot;$(ProjectDir)Scripts\typings\mvvmsample\mvvmsample.ts&quot;" />
+    <Exec Command="&quot;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.5\tsc.exe&quot; -t ES5 -d -out &quot;$(ProjectDir)Scripts\typings\mvvmsample\mvvmsample.d.ts&quot; &quot;$(ProjectDir)Scripts\typings\mvvmsample\mvvmsample.ts&quot;" />
+    <Exec Command="&quot;C:\Program Files (x86)\Microsoft\Microsoft Ajax Minifier\AjaxMin.exe&quot; -JS &quot;$(ProjectDir)Scripts\mvvmsample.js&quot; -out &quot;$(ProjectDir)Scripts\mvvmsample.min.js&quot;" />
+    <Exec Command="&quot;C:\Program Files (x86)\Microsoft\Microsoft Ajax Minifier\AjaxMin.exe&quot; -CSS -xml &quot;$(ProjectDir)AjaxMin.css.xml&quot;" />
+  </Target>
+  <Target Name="NuGetPack" Condition="'$(Configuration)'=='Release'" AfterTargets="ReleaseTypeScript">
+    <MakeDir Directories="nupkg" />
+    <Exec Command="nuget pack &quot;$(ProjectDir)mvvmsample.nuspec&quot; -Prop Configuration=Release -OutputDirectory .\nupkg" />
+  </Target>
+</Project>

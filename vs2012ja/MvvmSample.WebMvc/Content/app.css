@@ -1,0 +1,74 @@
+﻿body {
+    font-family:Meiryo;
+    font-size:small;
+}
+
+nav ul{
+    list-style-type:none;
+    padding:4px 8px 4px 4px;
+
+    display:block;
+    float:left;
+    width:100px;
+    height:80px;
+    border-right:solid 1px silver;
+    margin: 0 4px 4px 0;
+}
+
+article{
+    border-top:solid 1px silver;
+    clear:both;
+    padding: 0 10px 0 10px;
+}
+
+a.linkButton{
+    background-repeat:no-repeat;
+    padding-left:20px;
+    text-decoration:none;
+    color:black;
+
+    display:block;
+    width:80px;
+    height:20px;
+    border:solid 1px white;
+    margin:0 4px 4px 0;
+    border-radius:3px 3px 3px 3px;
+}
+a.linkButton:hover{
+    background-color:aliceblue;
+    border:solid 1px dodgerblue;
+    color:dodgerblue;
+}
+
+a.homeButton{
+    background-image:url(images/ribbon-home.png);
+}
+a.productsButton{
+    background-image:url(images/ribbon-products.png);
+}
+a.newItemButton{
+    background-image:url(images/ribbon-add.png);
+}
+a.editItemButton{
+    background-image:url(images/ribbon-edit.png);
+}
+a.deleteItemButton{
+    background-image:url(images/ribbon-delete.png);
+}
+table{
+
+    border-collapse:collapse;
+    overflow:auto;
+}
+td,th{
+    text-align:left;
+    padding: 5px 5px 5px 10px;
+    border-top:solid 1px gray;
+    border-left:solid 1px #e4e4e4;
+    border-right:solid 1px #e4e4e4;
+    border-bottom:solid 1px gray;
+}
+
+td.nowrap{
+    white-space: nowrap;
+}

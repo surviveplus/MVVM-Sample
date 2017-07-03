@@ -1,0 +1,8 @@
+﻿@model MvvmSample.WebMvc.Models.HomeModel
+@{
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<h1>@ViewBag.Title</h1>
+<p>@Html.Raw(Html.Encode(Model.Description).Replace("\n", "<br />"))</p>
+<p>@Model.Version</p>

@@ -1,0 +1,19 @@
+﻿@model MvvmSample.Data.ViewModels.ViewProduct
+@{
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<h1>@ViewBag.Title</h1>
+<div>@Html.ValidationSummary()</div>
+@using (Html.BeginForm("NewItem", "Products", FormMethod.Post))
+{
+    <p>Title : @Html.TextBox("Title", Model.Title)</p>
+    <p>ProductUrl : @Html.TextBox("ProductUrl", Model.ProductUrl)</p>
+    <p>DownloadUrl : @Html.TextBox("DownloadUrl", Model.DownloadUrl)</p>
+    <p>Description : @Html.TextBox("Description", Model.Description)</p>
+    <p>Publisher : @Html.TextBox("Publisher", Model.Publisher)</p>
+    <p>PublisherUrl : @Html.TextBox("PublisherUrl", Model.PublisherUrl)</p>
+    <p>ImageUrl : @Html.TextBox("ImageUrl", Model.ImageUrl)</p>
+    <p>Price : @Html.TextBox("Price", Model.Price)</p>
+    <p><input type="submit" value="Save" /></p>
+}

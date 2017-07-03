@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title - MVVM Sample</title>
+    <link href="@Url.Content("~/Content/app.css")" rel="stylesheet" />
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>@Html.ActionLink("Home", "Index", "Home", null, new { @class= "homeButton linkButton" })</li>
+            <li>@Html.ActionLink("Products", "Index", "Products", null, new { @class = "productsButton linkButton" })</li>
+        </ul>
+        @RenderSection("ribbon", required:false)
+    </nav>
+    <article>
+        @RenderBody()
+    </article>
+</body>
+</html>
